@@ -1,27 +1,28 @@
-h1 Todos
 
 .row
-  .col-xs-4
+  .col-xs-3
+  .col-xs-6  
+    h1 To Do List
     form(name='todoForm', novalidate)
       .form-group
         label(for='title') Title
-        input.form-control(type='text', name='title', ng-model='todo.title')
+        input.form-control(class='highlight' type='text', name='title', ng-model='todo.title')
       .form-group
         label(for='due') Due
-        input.form-control(type='date', name='due', ng-model='todo.due')
+        input.form-control(class='highlight' type='date', name='due', ng-model='todo.due')
       .form-group
         label(for='priority') Priority
-        select.form-control(name='priority', ng-model='todo.priority', ng-init='todo.priority="High"')
+        select.form-control(class='highlight' name='priority', ng-model='todo.priority', ng-init='todo.priority="High"')
           option High
           option Medium
           option Low
       .form-group    
         button(type='submit' class='btn btn-primary' ng-click='add()') Add Task
-        
-  .col-xs-8
+  .col-xs-3
     
 .row
-  .col-xs-12
+  .col-xs-1
+  .col-xs-10  
     table.table.table-hover.table-striped
       thead
         tr
@@ -35,4 +36,5 @@ h1 Todos
           td {{todo.title}}
           td {{todo.due}}
           td {{todo.priority}}
-     
+       
+  .col-xs-1

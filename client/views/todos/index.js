@@ -19,5 +19,6 @@ angular.module('angular-prototype')
 
   $scope.update = function(todo) {
     $scope.todos.$save(todo);
+    
   };
 }]);
