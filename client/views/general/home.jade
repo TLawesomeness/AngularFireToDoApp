@@ -1,1 +1,11 @@
 h1 Home
+
+#div1(ng-controller='HomeCtrl')
+  //- .div2(ng-show='user')
+  //-   p Hello, {{user.facebook.displayName}}
+    //- button(type='button' ng-click='logout()') Logout
+    
+  .div3(ng-hide='user')
+    p Welcome, please login.
+    button#login(type='button' ng-click='fbLogin()') Facebook Login
+    button#logout(type='button' ng-click='fbLogout()') Logout
